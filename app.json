@@ -1,0 +1,157 @@
+{
+  "name": "NezukoID bot",
+  "description": "A Telegram Group Management Bot",
+  "logo": "https://telegra.ph/file/bcecc640c26dd9268941d.jpg",
+  "keywords": ["telethon", "sqlalchemy", "mongodb"],
+  "repository": "https://github.com/deshadeeth-thisrana/Rose.git",
+  "success_url": "http://missjuliarobot.unaux.com",
+  "env": {
+    "API_KEY": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": "8347814",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": "f64349de208b132b905455179c9c19a1",
+      "required": true
+    },   
+    "STRING_SESSION": {
+      "description": "Get this value by running python3 session.py locally",
+      "value": "1BVtsOLwBu8LRpnQLTSoKUyoH7QbVG5QY-9S_jIg-Q0Xfq9_rFQFxQEF-QLocqGOZBmQx1NmFmYwhKWHB6Dy456oFNL1yMYCuh5mR_kraZJ6e2ErfqcHkarClpqlQ1Y38J2At9vSo6jiBOIOCPKHF-hVem_dLnsMInRUrb20QwgR7YwZJ86znzch1njAajWhGR13dv1gvqbIoiESV6RmSUaKOYzaqZzxQ2rpggFRHn0x1lYl3u9qrtichi3HddjVzJrxQktapUnNH0d-QwgTyRbBaFUdbYCqFok5wwivWFaiW_GAO9o6js1fa1xLZBVHF8ISRfp56L5taRygnxHk8t74Ns8T0yv0=",
+      "required": true
+    },
+    "TOKEN": {
+      "description": "Get your bot token from @BotFather",
+      "value": "2094691129:AAFkAs7xBZa4Xl2QkNBCQOBwHvZo4erD110",
+      "required": true
+    },
+    "UPSTREAM_REPO_URL": {
+      "description": "Copy paste the repository url here (fork/official)",
+      "value": "https://github.com/deshadeethThisarana/Sensei",
+      "required": false
+    },
+    "OPENWEATHERMAP_ID": {
+      "description": "Get your own APPID from https://api.openweathermap.org/data/2.5/weather",
+      "value": "",
+      "required": false
+    },
+    "IBM_WATSON_CRED_URL": {
+      "description": "This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
+      "value": "",
+      "required": false
+    },
+    "IBM_WATSON_CRED_PASSWORD": {
+      "description": "This is required for the speech to text module. Get your PASSWORD from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
+      "value": "",
+      "required": false
+    },
+    "LYDIA_API_KEY": {
+      "description": "This module needs CoffeeHouse API to work. So join https://telegram.dog/IntellivoidDev and send #activateapi and follow instructions",
+      "value": "",
+      "required": false
+    },
+    "OCR_API_KEY": {
+      "description": "Get an API Key from https://cloudmersive.com/ocr-api",
+      "value": "",
+      "required": false
+    },
+    "GBAN_LOGS": {
+      "description": "The group id for logging all gbans",
+      "value": "",
+      "required": true
+    },
+    "REM_BG_API_KEY": {
+      "description": "Get your own API key from https://www.remove.bg/",
+      "value": "",
+      "required": false
+    },
+    "SUDO_USERS": {
+      "description": "List of user id's who will have SUDO rights in your bot(they can gban/ungban users)",
+      "value": "1041727415",
+      "required": false
+    },
+    "YOUTUBE_API_KEY": {
+      "description": "Place your YouTube API Key here, check out https://developers.google.com/youtube/v3/getting-started)",
+      "value": "",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "An integer of consisting of your ID",
+      "value": "1041727415",
+      "required": true
+    },
+    "OWNER_USERNAME": {
+      "description": "Your username without @",
+      "value": "DeshadeethThisarana",
+      "required": true
+    },
+    "BOT_ID": {
+      "description": "userid of the bot itself, use any other bot to get it",
+      "value": "",
+      "required": true
+    },
+    "TIME_API_KEY": {
+      "description": "Required for timezone information, get your key from https://timezonedb.com/api",
+      "value": "",
+      "required": false
+    },
+    "CASH_API_KEY": {
+      "description": "Required for currency converter, get your key from https://www.alphavantage.co/support/#api-key",
+      "value": "",
+      "required": false
+    },
+    "MONGO_DB_URI": {
+      "description": "Required for database connections",
+      "value": "",
+      "required": true
+    },
+    "WOLFRAM_ID": {
+      "description": "Required for Assistant module, get your own key from wolframalpha.com",
+      "value": "",
+      "required": false
+    },
+    "WALL_API": {
+      "description": "Get one from https://wall.alphacoders.com/api.php",
+      "value": "",
+      "required": false
+    },
+    "VIRUS_API_KEY": {
+      "description": "Get one from https://cloudmersive.com/virus-api",
+      "value": "",
+      "required": false
+    },
+    "GOOGLE_CHROME_BIN": {
+      "description": "Required for chromedriver",
+      "value": "/app/.apt/usr/bin/google-chrome",
+      "required": false
+    },
+    "CHROME_DRIVER": {
+      "description": "Required for chromedriver",
+      "value": "/app/.chromedriver/bin/chromedriver",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    },
+    {
+      "plan": "ormongo:5-mmap"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-chromedriver"
+    }
+  ]
+}
